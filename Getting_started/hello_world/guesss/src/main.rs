@@ -43,9 +43,8 @@ fn main() {
             .expect("Faliure!!!");
 
         let n1: i32 = match str.trim().parse() {
-            Ok(naaam) => naaam, //match will return 'Ok(naaam)' if the string has succesfully been converted to number. 'naaam' is the value stored inside the 'Ok' varient.
+            Ok(naaam) => naaam, //match will return 'Ok(naaam)' if the string has succesfully been converted to number. 'naaam' is the value stored inside the 'Ok' varient. In the context of the function used, the 'Ok' varient will store different output inside it. Ok varient of the Result type returned from .read_line() will store the number of bytes/characters of the read input, while 'Ok' of .parse() Result type will return the actual value the function parsed.
             Err(_) => continue, //Here the underscore in Err means that all Err values should match with the Err varient that match returns.
-
         };
 
         match n1.cmp(&n2) {
