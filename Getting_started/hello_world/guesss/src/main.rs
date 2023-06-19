@@ -42,6 +42,7 @@ fn main() {
             .read_line(&mut str)
             .expect("Faliure!!!");
 
+        //Rust is a statically typed language, which means the compiler should know what type a variable is going to be. The compiler can sometimes guess the variable type based on the assigned value. But when the assigned value is depended on something else, or if the value can be of multiple types, for eg: when we parse() a string into an integer, we need to specify the type, many types can be returned from .parse().
         let n1: i32 = match str.trim().parse() {
             Ok(naaam) => naaam, //match will return 'Ok(naaam)' if the string has succesfully been converted to number. 'naaam' is the value stored inside the 'Ok' varient. In the context of the function used, the 'Ok' varient will store different output inside it. Ok varient of the Result type returned from .read_line() will store the number of bytes/characters of the read input, while 'Ok' of .parse() Result type will return the actual value the function parsed.
             Err(_) => continue, //Here the underscore in Err means that all Err values should match with the Err varient that match returns.
