@@ -3,8 +3,8 @@
 use std::io;
 use std::io::Write;
 
-fn read() -> i32{
-    let n: i32;
+fn read() -> i128{
+    let n: i128;
     let mut num = String::new();
     loop{
         num.clear();
@@ -30,12 +30,11 @@ fn read() -> i32{
 }
 
 fn main(){
-    let n: i32=read();
-    let mut rem: i32;
-    let mut rev: i32=0;
-    let mut tmp: i32=n;
-    let mut count: i32=0;
-
+    let n: i128=read();
+    let mut rem: i128;
+    let mut rev: i128=0;
+    let mut tmp: i128=n;
+    
     loop{
         rev=rev+(tmp%10);
         rem=tmp/10;
@@ -45,12 +44,11 @@ fn main(){
         }
         else{
             tmp=rem;
+            //println!("Rev: {}", &rev);
             rev=rev*10;
-            count=count+1;
-            println!("Count: {}",count);
+            //println!("rev: {}", &rev);
         }
     }
-    println!("Output: {}",rev);
 
     if rev==n{
         println!("\nInput is a palindrome!");
