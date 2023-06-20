@@ -1,3 +1,5 @@
+//To do, fix palindrome error for 10+ characters.
+
 use std::io;
 use std::io::Write;
 
@@ -32,6 +34,7 @@ fn main(){
     let mut rem: i32;
     let mut rev: i32=0;
     let mut tmp: i32=n;
+    let mut count: i32=0;
 
     loop{
         rev=rev+(tmp%10);
@@ -43,6 +46,8 @@ fn main(){
         else{
             tmp=rem;
             rev=rev*10;
+            count=count+1;
+            println!("Count: {}",count);
         }
     }
     println!("Output: {}",rev);
