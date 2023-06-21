@@ -3,8 +3,8 @@
 use std::io;
 use std::io::Write;
 
-fn read() -> i32{
-    let n: i32;
+fn read() ->  isize{ //isize is a scalar-integer datatype. It is used to represent a signed integer whose size(32, 64) depend on the computer's architecture. If the computer has a 32bit architecture the integer size will be 32bit.
+    let n:  isize;
     let mut num = String::new();
     loop{
         num.clear();
@@ -30,10 +30,10 @@ fn read() -> i32{
 }
 
 fn main(){
-    let n: i32=read();
-    let mut rem: i32;
-    let mut rev: i32=0;
-    let mut tmp: i32=n;
+    let n:  isize=read();
+    let mut rem:  isize;
+    let mut rev:  isize=0;
+    let mut tmp:  isize=n;
 
     loop{
         rev=rev+(tmp%10);
