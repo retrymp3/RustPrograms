@@ -68,5 +68,5 @@ fn main() {
     //It will check with the first arm which is, Ordering::Less. It does not match, so it goes to the next arm.
     //Ordering::Greater this matches with the next arm. Then the println!() macro is executed, and the match expression ends after the first match.
     }
-    //
+    
 }
