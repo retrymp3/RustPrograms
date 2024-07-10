@@ -8,7 +8,7 @@ fn read() -> i32{
         str.clear(); //Clears the contents of the variable.
         println!("Enter a number:");
         io::stdin()
-            .read_line(&mut str) //.read_line(&mut str) actually appends the input to the variable that we already defined with an empty string. It does not overwrite it. There for you need to define the variable inside the loop for it to shadow the variable before, so that it won't overwrite the contents of that variable.
+            .read_line(&mut str) //.read_line(&mut str) actually appends the input to the variable that we already defined with an empty string. It does not overwrite it. There for you need to define the variable inside the loop for it to shadow the variable before, so that it will overwrite the contents of that variable.
             .expect("Error in input");
     
         n=match str.trim().parse(){
